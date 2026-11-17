@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Clone — O'quv loyihasi</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav" id="nav">
+    <nav class="nav__inner">
+      <a href="#home" class="nav__logo" data-link>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="currentColor"/><path d="M12 5c1-2.5 3-3.5 4.5-3.5C16 4 14 5.2 12 5z" fill="currentColor"/></svg>
+        <span>Apple</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li class="nav__item"><a href="#iphone" data-link data-cat="iphone">iPhone</a>
+          <div class="mega"><div class="mega__inner">
+            <div><h6>iPhone modellar</h6><a href="#iphone" data-link>iPhone 17 Pro</a><a href="#iphone" data-link>iPhone Air</a><a href="#iphone" data-link>iPhone 17</a><a href="#iphone" data-link>iPhone 16e</a></div>
+            <div><h6>Xarid</h6><a href="#" data-register>iPhone sotib olish</a><a href="#compare" data-link>Taqqoslash</a></div>
+          </div></div>
+        </li>
+        <li class="nav__item"><a href="#ipad" data-link>iPad</a>
+          <div class="mega"><div class="mega__inner">
+            <div><h6>iPad modellar</h6><a href="#ipad" data-link>iPad Pro</a><a href="#ipad" data-link>iPad Air</a><a href="#ipad" data-link>iPad</a><a href="#ipad" data-link>iPad mini</a></div>
+            <div><h6>Aksessuarlar</h6><a href="#ipad" data-link>Apple Pencil</a><a href="#ipad" data-link>Magic Keyboard</a></div>
+          </div></div>
+        </li>
+        <li class="nav__item"><a href="#mac" data-link>Mac</a>
+          <div class="mega"><div class="mega__inner">
+            <div><h6>Mac modellar</h6><a href="#mac" data-link>MacBook Air</a><a href="#mac" data-link>MacBook Pro</a><a href="#mac" data-link>iMac</a><a href="#mac" data-link>Mac mini</a></div>
+            <div><h6>Xarid</h6><a href="#" data-register>Mac sotib olish</a></div>
+          </div></div>
+        </li>
+        <li class="nav__item"><a href="#watch" data-link>Watch</a></li>
+        <li class="nav__item"><a href="#airpods" data-link>AirPods</a></li>
+        <li class="nav__item"><a href="#compare" data-link>Taqqoslash</a></li>
+        <li class="nav__item"><a href="#contact" data-link>Aloqa</a></li>
+      </ul>
+
+      <div class="nav__icons">
+        <button class="icon-btn" id="searchBtn" aria-label="Qidirish">
+          <svg viewBox="0 0 24 24" width="17" height="17"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="userBtn" aria-label="Ro'yxatdan o'tish">
+          <svg viewBox="0 0 24 24" width="17" height="17"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn bag" id="bagBtn" aria-label="Savat">
+          <svg viewBox="0 0 24 24" width="17" height="17"><path d="M5 8h14l-1 13H6L5 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 016 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span class="bag__count" id="bagCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Menyu"><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <!-- Qidiruv paneli -->
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <input type="text" id="searchInput" placeholder="Mahsulot qidiring... (masalan: iPhone, MacBook)" />
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO CAROUSEL ===================== -->
+  <section class="hero" id="home">
+    <div class="carousel" id="carousel">
+      <div class="carousel__track" id="carouselTrack">
+        <div class="slide slide--dark">
+          <div class="slide__text">
+            <h2>iPhone 17 Pro</h2>
+            <p>Eng kuchli iPhone. Titan dizayn, Pro kamera tizimi.</p>
+            <div class="slide__btns"><a href="#iphone" class="btn btn--blue" data-link>Batafsil</a><button class="btn btn--outline" data-buy="iPhone 17 Pro">Sotib olish</button></div>
+          </div>
+          <img class="slide__img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-deserttitanium?wid=1200&hei=1200&fmt=png-alpha" alt="iPhone 17 Pro" data-fallback="iPhone" />
+        </div>
+        <div class="slide slide--light">
+          <div class="slide__text">
+            <h2>MacBook Air</h2>
+            <p>Yengil. Kuchli. Kun bo'yi ishlaydigan batareya.</p>
+            <div class="slide__btns"><a href="#mac" class="btn btn--blue" data-link>Batafsil</a><button class="btn btn--outline" data-buy="MacBook Air">Sotib olish</button></div>
+          </div>
+          <img class="slide__img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba13-midnight-select-202402?wid=1200&hei=1000&fmt=png-alpha" alt="MacBook Air" data-fallback="MacBook" />
+        </div>
+        <div class="slide slide--gradient">
+          <div class="slide__text">
+            <h2>Apple Watch</h2>
+            <p>Sog'lig'ingiz uchun eng aqlli hamroh.</p>
+            <div class="slide__btns"><a href="#watch" class="btn btn--blue" data-link>Batafsil</a><button class="btn btn--outline" data-buy="Apple Watch Series 11">Sotib olish</button></div>
+          </div>
+          <img class="slide__img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXL93ref_VW_34FR+watch-case-46-aluminum-jetblack-nc-s10_VW_34FR?wid=1000&hei=1000&fmt=png-alpha" alt="Apple Watch" data-fallback="Watch" />
+        </div>
+        <div class="slide slide--light">
+          <div class="slide__text">
+            <h2>AirPods Pro</h2>
+            <p>Shovqinni faol bostirish. Ajoyib ovoz sifati.</p>
+            <div class="slide__btns"><a href="#airpods" class="btn btn--blue" data-link>Batafsil</a><button class="btn btn--outline" data-buy="AirPods Pro 3">Sotib olish</button></div>
+          </div>
+          <img class="slide__img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=1000&hei=1000&fmt=png-alpha" alt="AirPods Pro" data-fallback="AirPods" />
+        </div>
+      </div>
+      <button class="carousel__arrow carousel__arrow--prev" id="prevBtn" aria-label="Oldingi">&#10094;</button>
+      <button class="carousel__arrow carousel__arrow--next" id="nextBtn" aria-label="Keyingi">&#10095;</button>
+      <div class="carousel__dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCT SECTIONS (JS bilan to'ldiriladi) ===================== -->
+  <main id="products"></main>
+
+  <!-- ===================== TAQQOSLASH ===================== -->
+  <section class="section compare" id="compare">
+    <h2 class="section__title">Qaysi iPhone sizga mos?</h2>
+    <div class="compare__grid" id="compareGrid"></div>
+  </section>
+
+  <!-- ===================== ALOQA ===================== -->
+  <section class="section contact" id="contact">
+    <h2 class="section__title">Biz bilan bog'laning</h2>
+    <p class="section__sub">Savollaringiz bormi? Xabar qoldiring — tez orada javob beramiz.</p>
+    <div class="contact__wrap">
+      <div class="contact__info">
+        <div class="info-card"><span>📍</span><div><h4>Manzil</h4><p>Toshkent sh., Amir Temur ko'chasi, 1</p></div></div>
+        <div class="info-card"><span>📞</span><div><h4>Telefon</h4><p>+998 90 000 00 00</p></div></div>
+        <div class="info-card"><span>✉️</span><div><h4>Email</h4><p>info@example.uz</p></div></div>
+        <div class="info-card"><span>🕘</span><div><h4>Ish vaqti</h4><p>Du–Sha: 09:00 – 20:00</p></div></div>
+      </div>
+      <form class="form contact__form" id="contactForm" novalidate>
+        <div class="field"><input type="text" id="cName" placeholder=" " required /><label for="cName">Ismingiz</label><small></small></div>
+        <div class="field"><input type="email" id="cEmail" placeholder=" " required /><label for="cEmail">Email</label><small></small></div>
+        <div class="field"><input type="tel" id="cPhone" placeholder=" " /><label for="cPhone">Telefon (ixtiyoriy)</label><small></small></div>
+        <div class="field"><textarea id="cMsg" rows="4" placeholder=" " required></textarea><label for="cMsg">Xabaringiz</label><small></small></div>
+        <button type="submit" class="btn btn--blue btn--full">Yuborish</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__cols">
+        <div><h5>Mahsulotlar</h5><a href="#iphone" data-link>iPhone</a><a href="#ipad" data-link>iPad</a><a href="#mac" data-link>Mac</a><a href="#watch" data-link>Watch</a><a href="#airpods" data-link>AirPods</a></div>
+        <div><h5>Hisob</h5><a href="#" data-register>Ro'yxatdan o'tish</a><a href="#" data-register>Kirish</a></div>
+        <div><h5>Yordam</h5><a href="#contact" data-link>Aloqa</a><a href="#compare" data-link>Taqqoslash</a></div>
+        <div><h5>Ijtimoiy tarmoqlar</h5><a href="#">Telegram</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+      </div>
+      <p class="footer__note">Bu sahifa HTML/CSS/JS bo'yicha o'quv loyihasi. Apple Inc. bilan hech qanday aloqasi yo'q. Mahsulot nomlari va rasmlar o'z egalariga tegishli. Formalar hech qayerga ma'lumot yubormaydi.</p>
+      <p class="footer__copy">© 2026 O'quv loyihasi. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL: RO'YXATDAN O'TISH ===================== -->
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Yopish">&times;</button>
+      <div class="tabs">
+        <button class="tab active" data-tab="register">Ro'yxatdan o'tish</button>
+        <button class="tab" data-tab="login">Kirish</button>
+      </div>
+      <p class="modal__product" id="modalProduct"></p>
+
+      <form class="form" id="registerForm" novalidate>
+        <div class="field"><input type="text" id="rName" placeholder=" " required /><label for="rName">Ism familiya</label><small></small></div>
+        <div class="field"><input type="email" id="rEmail" placeholder=" " required /><label for="rEmail">Email</label><small></small></div>
+        <div class="field"><input type="tel" id="rPhone" placeholder=" " required /><label for="rPhone">Telefon: +998 90 123 45 67</label><small></small></div>
+        <div class="field"><input type="password" id="rPass" placeholder=" " required /><label for="rPass">Parol (kamida 8 belgi)</label><small></small></div>
+        <div class="field"><input type="password" id="rPass2" placeholder=" " required /><label for="rPass2">Parolni takrorlang</label><small></small></div>
+        <label class="check"><input type="checkbox" id="rAgree" /> Shartlarga roziman</label>
+        <button type="submit" class="btn btn--blue btn--full">Ro'yxatdan o'tish</button>
+      </form>
+
+      <form class="form hidden" id="loginForm" novalidate>
+        <div class="field"><input type="email" id="lEmail" placeholder=" " required /><label for="lEmail">Email</label><small></small></div>
+        <div class="field"><input type="password" id="lPass" placeholder=" " required /><label for="lPass">Parol</label><small></small></div>
+        <button type="submit" class="btn btn--blue btn--full">Kirish</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== MODAL: MAHSULOT HAQIDA ===================== -->
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__box modal__box--wide" id="detailBox"></div>
+  </div>
+
+  <!-- Toast xabar -->
+  <div class="toast" id="toast"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
